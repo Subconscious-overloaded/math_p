@@ -51,7 +51,7 @@ def savitzky_golay(y, window_size, order, deriv, rate=1):
     # Normal inv parabol coeff
     m1 = np.matmul( np.linalg.inv(   np.matmul(np.transpose(b),w_b)),  np.transpose(w_b)  )
     m1 = m1[deriv] * rate**deriv * factorial(deriv) 
-    m1= np.asarray(m)
+    m1= np.asarray(m1)
     m1= m1.flatten()
 
     
