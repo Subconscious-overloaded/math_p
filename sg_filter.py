@@ -62,13 +62,13 @@ def savitzky_golay(y, window_size, order, deriv, rate=1):
    # y = np.concatenate((firstvals, y, lastvals))
     return np.convolve( m[::-1], y, mode='valid')  , np.convolve( M[::-1], y, mode='valid') ,  np.convolve( m1[::-1], y, mode='valid') 
 
-# two windows 40 before and after
+# two windows 41 before and after
 res1, res2 ,res3 = savitzky_golay(i, window_size=83, order=3,deriv=0)
 
 plt.plot(res1)
 #pseudo inverse Moore penrose rect smoothing
 
 
-res4 = savgol_filter(i, 81, 3, deriv = 3 )
+res4 = savgol_filter(i, 83, 3, deriv = 3 )
 plt.plot(res4)
 
